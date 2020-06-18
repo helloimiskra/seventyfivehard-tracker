@@ -27,6 +27,17 @@ class Api::V1::UsersController < ApplicationController
         @user.destroy
     end
 
+    def edit
+        @user = User.find(params[:id])
+    end
+
+    def update
+        @user = User.find(params[:id])
+        @user.update(name: params[:user][:name], username: params[:user][:username], goals: params[:user][:goals])
+        render json: @user
+    end
+
+
     private 
 
 
