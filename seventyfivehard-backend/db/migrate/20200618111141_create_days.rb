@@ -12,6 +12,7 @@ class CreateDays < ActiveRecord::Migration[6.0]
       t.boolean :book_read
       t.string :book_info
       t.boolean :day_complete
+      t.integer :attempt_id
 
       t.timestamps
     end
