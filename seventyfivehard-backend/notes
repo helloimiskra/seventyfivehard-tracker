@@ -10,3 +10,11 @@ progress_pic_src:string
 drank_water:boolean
 book_read:boolean
 day_complete:boolean
+
+User story
+
+Who is your User?
+
+What is their pain point?
+
+How do they use our solution to overcome this problem?

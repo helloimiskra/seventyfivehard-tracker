@@ -7,6 +7,7 @@ class Attempt < ApplicationRecord
             self.completed = true
             self.save
         end
+ 
     end
 
 end
