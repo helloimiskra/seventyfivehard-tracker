@@ -1,4 +1,4 @@
 class Attempt < ApplicationRecord
     has_many :days
-    validates: :start_date, presence: true
+    validates :startdate, presence: true
 end
