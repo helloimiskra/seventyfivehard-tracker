@@ -1,0 +1,12 @@
+Day
+attributes:
+diet:boolean
+workout_one:boolean
+workout_two:boolean
+no_alcohol:boolean
+no_cheatmeal:boolean
+progress_pic:boolean
+progress_pic_src:string
+drank_water:boolean
+book_read:boolean
+day_complete:boolean
