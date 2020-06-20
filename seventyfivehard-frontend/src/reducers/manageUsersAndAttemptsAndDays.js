@@ -8,15 +8,28 @@ const rootReducer = combineReducers({
 
 export default rootReducer;
 
-function usersReducer(state = [], action){
+function usersReducer(state = { users: [], loading: false } , action){
     let idx;
     switch(action.type){
-        case "ADD_USER":
-            return [...state, action.user];
+        case 'LOADING_USERS':
+            return {
+                ...state,
+                users: [...state.users],
+                loading: true
+            }
+        case "ADD_USERS":
+            console.log(action.users)
+            return {
+                ...state, 
+                users: action.users,
+                loading: false
+            }
         case "DELETE_USER":
             idx = state.findIndex(user => user.id===action.id);
             return {
-                ...state, users: [...state.slice(0, idx), ...state.slice(idx + 1)]
+                ...state, 
+                users: [...state.slice(0, idx), ...state.slice(idx + 1)], 
+                loading: false
             };
         default:
             return state; 
