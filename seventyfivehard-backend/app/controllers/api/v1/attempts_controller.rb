@@ -4,14 +4,14 @@ class Api::V1::AttemptsController < ApplicationController
 
     def index
         @attempts = @user.attempts
-        render json: @attempts
+        render json: AttemptSerializer.new(@attempts)
     end
 
 
     def create
-        @attempt = attempt.new(attempt_params)
+        @attempt = Attempt.new(attempt_params)
         if @attempt.save
-            render json: @attempt
+            render json: AttemptSerializer.new(@attempt)
         else
             render json: {error: "Error creating attempt"}
         end
@@ -19,13 +19,13 @@ class Api::V1::AttemptsController < ApplicationController
     end
 
     def show
-        @attempt = attempt.find(params[:id])
-        render json: @attempt
+        @attempt = Attempt.find(params[:id])
+        render json: AttemptSerializer.new(@attempt)
 
     end
 
     def destroy
-        @attempt = attempt.find(params[:id])
+        @attempt = Attempt.find(params[:id])
         @attempt.destroy
     end
 

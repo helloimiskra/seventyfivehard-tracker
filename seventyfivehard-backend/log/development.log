@@ -137,3 +137,261 @@ Processing by Api::V1::UsersController#index as */*
 Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.8ms | Allocations: 1279)
 
 
+Started GET "/api/v1/users/" for ::1 at 2020-06-20 17:41:28 +0900
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 23ms (Views: 15.9ms | ActiveRecord: 1.9ms | Allocations: 7466)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-20 17:49:20 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 0.0ms | Allocations: 78528)
+
+
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+  
+NameError (undefined local variable or method `users' for #<Api::V1::UsersController:0x00007f9fbba2ff50>
+Did you mean?  @users):
+  
+app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/api/v1/users/" for ::1 at 2020-06-20 17:49:36 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 26ms (Views: 21.4ms | ActiveRecord: 1.9ms | Allocations: 13667)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-20 17:51:52 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 26ms (Views: 21.9ms | ActiveRecord: 1.6ms | Allocations: 11541)
+
+
+Started GET "/api/v1/days/" for ::1 at 2020-06-20 17:53:42 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/days"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/days/" for ::1 at 2020-06-20 17:53:51 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/days"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/users/1/attempts/1/days/" for ::1 at 2020-06-20 17:54:11 +0900
+  
+SyntaxError (/Users/iskrabatistapoblete/Flatiron/code/seventyfivehard-tracker/seventyfivehard-backend/app/controllers/api/v1/days_controller.rb:53: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/api/v1/days_controller.rb:53: syntax error, unexpected end, expecting end-of-input
+app/controllers/api/v1/days_controller.rb:53: syntax error, unexpected end, expecting end-of-input
+Started GET "/api/v1/attempts/1/days/" for ::1 at 2020-06-20 17:54:50 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/attempts/1/days"):
+  
+actionpack (6.0.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.2) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.2) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.2) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.2) lib/rails/engine.rb:527:in `call'
+puma (4.3.5) lib/puma/configuration.rb:228:in `call'
+puma (4.3.5) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.5) lib/puma/server.rb:472:in `process_client'
+puma (4.3.5) lib/puma/server.rb:328:in `block in run'
+puma (4.3.5) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/users/1/attempts/1/days" for ::1 at 2020-06-20 17:55:14 +0900
+  
+SyntaxError (/Users/iskrabatistapoblete/Flatiron/code/seventyfivehard-tracker/seventyfivehard-backend/app/controllers/api/v1/days_controller.rb:53: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/api/v1/days_controller.rb:53: syntax error, unexpected end, expecting end-of-input
+app/controllers/api/v1/days_controller.rb:53: syntax error, unexpected end, expecting end-of-input
+Started GET "/api/v1/users/1/attempts/1/days" for ::1 at 2020-06-20 17:56:04 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/iskrabatistapoblete/Flatiron/code/seventyfivehard-tracker/seventyfivehard-backend/app/controllers/api/v1/days_controller.rb:53: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/api/v1/days_controller.rb:53: syntax error, unexpected end, expecting end-of-input
+app/controllers/api/v1/days_controller.rb:53: syntax error, unexpected end, expecting end-of-input
+Started GET "/api/v1/users/1/attempts/1/days" for ::1 at 2020-06-20 17:56:23 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/iskrabatistapoblete/Flatiron/code/seventyfivehard-tracker/seventyfivehard-backend/app/controllers/api/v1/days_controller.rb:53: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/api/v1/days_controller.rb:53: syntax error, unexpected end, expecting end-of-input
+app/controllers/api/v1/days_controller.rb:53: syntax error, unexpected end, expecting end-of-input
+Started GET "/api/v1/users/1/attempts/" for ::1 at 2020-06-20 17:56:38 +0900
+Processing by Api::V1::AttemptsController#index as */*
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/attempts_controller.rb:35:in `set_user'
+  [1m[36mAttempt Load (0.5ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/attempts_controller.rb:7:in `index'
+Completed 200 OK in 26ms (Views: 10.0ms | ActiveRecord: 1.9ms | Allocations: 12909)
+
+
+Started GET "/api/v1/users/1/attempts/1" for ::1 at 2020-06-20 17:56:51 +0900
+Processing by Api::V1::AttemptsController#show as */*
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/attempts_controller.rb:35:in `set_user'
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 0.2ms | Allocations: 71177)
+
+
+  
+NameError (undefined local variable or method `attempt' for #<Api::V1::AttemptsController:0x00007f9fbba81670>):
+  
+app/controllers/api/v1/attempts_controller.rb:22:in `show'
+Started GET "/api/v1/users/1/attempts/1" for ::1 at 2020-06-20 17:57:55 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AttemptsController#show as */*
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/attempts_controller.rb:35:in `set_user'
+  [1m[36mAttempt Load (0.5ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/attempts_controller.rb:22:in `show'
+Completed 200 OK in 20ms (Views: 0.3ms | ActiveRecord: 1.7ms | Allocations: 12044)
+
+
+Started GET "/api/v1/users/1/attempts/1/days" for ::1 at 2020-06-20 17:58:13 +0900
+  
+SyntaxError (/Users/iskrabatistapoblete/Flatiron/code/seventyfivehard-tracker/seventyfivehard-backend/app/controllers/api/v1/days_controller.rb:53: syntax error, unexpected end, expecting end-of-input):
+  
+app/controllers/api/v1/days_controller.rb:53: syntax error, unexpected end, expecting end-of-input
+app/controllers/api/v1/days_controller.rb:53: syntax error, unexpected end, expecting end-of-input
+Started GET "/api/v1/users/1/attempts/1/days" for ::1 at 2020-06-20 17:58:48 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/iskrabatistapoblete/Flatiron/code/seventyfivehard-tracker/seventyfivehard-backend/app/controllers/api/v1/days_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/api/v1/days_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/api/v1/days_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started GET "/api/v1/users/1/attempts/1/days" for ::1 at 2020-06-20 17:59:51 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::DaysController#index as */*
+  Parameters: {"user_id"=>"1", "attempt_id"=>"1"}
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 0.0ms | Allocations: 71321)
+
+
+  
+NameError (undefined local variable or method `attempt' for #<Api::V1::DaysController:0x00007f9fbc120d00>):
+  
+app/controllers/api/v1/days_controller.rb:43:in `set_attempt'
+Started GET "/api/v1/users/1/attempts/1/days" for ::1 at 2020-06-20 18:00:47 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  
+SyntaxError (/Users/iskrabatistapoblete/Flatiron/code/seventyfivehard-tracker/seventyfivehard-backend/app/controllers/api/v1/days_controller.rb:52: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/api/v1/days_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+app/controllers/api/v1/days_controller.rb:52: syntax error, unexpected end-of-input, expecting end
+Started GET "/api/v1/users/1/attempts/1/days" for ::1 at 2020-06-20 18:01:17 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::DaysController#index as */*
+  Parameters: {"user_id"=>"1", "attempt_id"=>"1"}
+  [1m[36mAttempt Load (0.7ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/days_controller.rb:43:in `set_attempt'
+  [1m[36mDay Load (0.7ms)[0m  [1m[34mSELECT "days".* FROM "days" WHERE "days"."attempt_id" = ?[0m  [["attempt_id", 1]]
+  ↳ app/controllers/api/v1/days_controller.rb:7:in `index'
+Completed 200 OK in 35ms (Views: 18.5ms | ActiveRecord: 2.8ms | Allocations: 18724)
+
+
+Started GET "/api/v1/users/1/attempts/1/days" for ::1 at 2020-06-20 18:03:32 +0900
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::DaysController#index as */*
+  Parameters: {"user_id"=>"1", "attempt_id"=>"1"}
+  [1m[36mAttempt Load (0.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/days_controller.rb:43:in `set_attempt'
+  [1m[36mDay Load (0.1ms)[0m  [1m[34mSELECT "days".* FROM "days" WHERE "days"."attempt_id" = ?[0m  [["attempt_id", 1]]
+  ↳ app/controllers/api/v1/days_controller.rb:7:in `index'
+Completed 200 OK in 32ms (Views: 13.9ms | ActiveRecord: 1.3ms | Allocations: 18200)
+
+
+Started GET "/api/v1/users/1/attempts/1/days/1" for ::1 at 2020-06-20 18:03:42 +0900
+Processing by Api::V1::DaysController#show as */*
+  Parameters: {"user_id"=>"1", "attempt_id"=>"1", "id"=>"1"}
+  [1m[36mAttempt Load (0.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/days_controller.rb:43:in `set_attempt'
+  [1m[36mDay Load (0.2ms)[0m  [1m[34mSELECT "days".* FROM "days" WHERE "days"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/days_controller.rb:21:in `show'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 1612)
+
+
