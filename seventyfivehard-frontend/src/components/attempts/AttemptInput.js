@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 
-class DayInput extends Component {
+class AttemptInput extends Component {
     render() {
         return (
             <div>
-                DayInput
-                
+                Attempt Input Component
             </div>
         );
     }
 }
 
-export default DayInput;
+export default AttemptInput;

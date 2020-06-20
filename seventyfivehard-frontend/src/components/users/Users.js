@@ -1,17 +1,17 @@
 import React from 'react'
 
-const UserList = ({users}) => {
+const Users= ({users}) => {
     console.log(users)
 
 
     return (
         <div>
-            Userlist
+            Users Component
             
         </div>
     )
 }
-export default UserList; 
+export default Users; 
 
 //{users.map((x, i) => ( <div key={i}> User's Name: {x.name} <br></br>Your Goals: {x.goals} </div>
 

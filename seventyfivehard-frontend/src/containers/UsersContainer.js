@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import UserList from '../components/users/UserList'
+import Users from '../components/users/Users'
 import User from '../components/users/User'
 import UserInput from '../components/users/UserInput'
 import {connect} from 'react-redux'
@@ -22,7 +22,7 @@ class UsersContainer extends Component {
             <div>
                 Users Container
                 <UserInput/>
-                <UserList/>
+                <Users/>
                 <User/>
             </div>
         )
