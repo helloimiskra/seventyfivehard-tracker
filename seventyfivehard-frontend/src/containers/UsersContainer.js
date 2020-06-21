@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
-import Users from '../components/users/Users'
 import User from '../components/users/User'
+import Users from '../components/users/Users'
 import UserInput from '../components/users/UserInput'
+import {Route} from 'react-router-dom'
 import {connect} from 'react-redux'
 import { fetchUsers } from '../actions/fetchUsers';
 import { addUser } from '../actions/addUser'
@@ -19,15 +20,15 @@ class UsersContainer extends Component {
     render() {
         return (
             <div>
-                Users Container
-                <UserInput
-                addUser={this.props.addUser} />
-                <Users users={this.props.users}/>
+              <Route path='/users/new' render={()=> <UserInput addUser={this.props.addUser} />}/>
+              <Route path='/users/:id' render={(routerProps) => <User {...routerProps} users={this.props.users}/>} />
+              <Route exact path ='/users' render={(routerProps) => <Users {...routerProps} users={this.props.users}/>}/>
            
             </div>
         )
     }
 }
+
 
 const mapStateToProps = state => {
     console.log(`current state: ${state.users}`)

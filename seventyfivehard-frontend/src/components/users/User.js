@@ -1,13 +1,18 @@
 import React from 'react'
 
 
-const User = ({user}) => {
-    console.log(user)
+const User = (props) => {
+    console.log()
+
+    let user = props.users[props.match.params.id - 1]
+
     return <li>
-             User's Name: {user.name} <br></br> Your Goals: {user.goals}      
+           {user ? `User's Name: ${user.name} Your Goals: ${user.goals}` : null}     
             
     </li>
     
 }
 
 export default User
+
+//
