@@ -11,9 +11,7 @@ import { addUser } from '../actions/addUser'
 class UsersContainer extends Component {
     
     componentDidMount(){
-
         this.props.fetchUsers()
-        
       };
     
       
@@ -25,7 +23,7 @@ class UsersContainer extends Component {
                 <UserInput
                 addUser={this.props.addUser} />
                 <Users users={this.props.users}/>
-                <User/>
+           
             </div>
         )
     }

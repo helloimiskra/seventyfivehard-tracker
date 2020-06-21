@@ -1,4 +1,5 @@
 import React from 'react'
+import User from './User'
 
 const Users= ({users}) => {
     console.log(users)
@@ -6,12 +7,9 @@ const Users= ({users}) => {
 
     return (
         <div>
-            Users Component
-            {users.map((x, i) => ( <div key={i}> User's Name: {x.name} <br></br>Your Goals: {x.goals}</div>))}
-            </div>
+            {users.map(user => <div key={user.id}><User user={user}/></div>   )}
+        </div>
     )
-    }
+}
 
 export default Users; 
-
-//{users.map((x, i) => ( <div key={i}> User's Name: {x.name} <br></br>Your Goals: {x.goals} </div>
