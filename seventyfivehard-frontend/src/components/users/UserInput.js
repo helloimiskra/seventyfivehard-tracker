@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class UserInput extends Component {
+class UserInput extends Component {
 
     state = {
         username: '',
@@ -10,13 +10,14 @@ export default class UserInput extends Component {
 
     handleOnChange(event){
         this.setState({
-            [event.target.value]: event.target.value
+            [event.target.name]: event.target.value
         })
     }
 
     handleOnSubmit(event){
         event.preventDefault()
         let user = {name: this.state.name, username: this.state.username, goals: this.state.goals}
+        console.log(this.props)
         this.props.addUser(user)
         this.setState({
             name: '',
@@ -28,10 +29,34 @@ export default class UserInput extends Component {
     render() {
         return (
             <div>
+                User Input
+                <h1>Sign-up or log-in:</h1>
 
-                UserInput
+                <form onSubmit={(event)=> this.handleOnSubmit(event)}>
+                <label>Name: </label>
+                <input
+                type="text"
+                name="name"
+                value={this.state.name}
+                onChange={(event)=> this.handleOnChange(event)}/><br></br>
+                <label>Username: </label>
+                <input
+                type="text"
+                name="username"
+                value={this.state.username}
+                onChange={(event)=> this.handleOnChange(event)}/><br></br>
+                <label>Your goals for this challenge: </label>
+                <input
+                type="text"
+                name="goals"
+                value={this.state.goals}
+                onChange={(event)=> this.handleOnChange(event)}/><br></br>
+                <input type="submit"/>
+                </form>
                 
             </div>
         )
     }
 }
+
+export default UserInput

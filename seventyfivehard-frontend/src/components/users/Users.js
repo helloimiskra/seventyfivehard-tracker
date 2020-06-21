@@ -7,12 +7,11 @@ const Users= ({users}) => {
     return (
         <div>
             Users Component
-            
-        </div>
+            {users.map((x, i) => ( <div key={i}> User's Name: {x.name} <br></br>Your Goals: {x.goals}</div>))}
+            </div>
     )
-}
+    }
+
 export default Users; 
 
 //{users.map((x, i) => ( <div key={i}> User's Name: {x.name} <br></br>Your Goals: {x.goals} </div>
-
-            //))}

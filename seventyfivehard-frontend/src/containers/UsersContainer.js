@@ -21,8 +21,9 @@ class UsersContainer extends Component {
         return (
             <div>
                 Users Container
-                <UserInput/>
-                <Users/>
+                <UserInput
+                addUser={this.props.addUser} />
+                <Users users={this.props.users}/>
                 <User/>
             </div>
         )
@@ -33,14 +34,15 @@ const mapStateToProps = state => {
     console.log(`current state: ${state.users}`)
    return {
       
-      users: state.users,
+      users: state.users.users,
       loading: state.loading
     }
 }
 
 const mapDispatchToProps = dispatch => {
     return {
-      fetchUsers: () => dispatch(fetchUsers())
+      fetchUsers: () => dispatch(fetchUsers()),
+      addUser: user => dispatch({type: 'ADD_USER', user})
     }
   }
 
