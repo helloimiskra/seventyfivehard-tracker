@@ -4,6 +4,7 @@ import User from '../components/users/User'
 import UserInput from '../components/users/UserInput'
 import {connect} from 'react-redux'
 import { fetchUsers } from '../actions/fetchUsers';
+import { addUser } from '../actions/addUser'
 
 
 
@@ -42,7 +43,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => {
     return {
       fetchUsers: () => dispatch(fetchUsers()),
-      addUser: user => dispatch({type: 'ADD_USER', user})
+      addUser: user => dispatch(addUser(user))
     }
   }
 

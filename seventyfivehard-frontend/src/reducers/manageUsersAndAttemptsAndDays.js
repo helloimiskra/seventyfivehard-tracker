@@ -22,7 +22,14 @@ function usersReducer(state = { users: [], loading: false } , action){
             return {
                 ...state, 
                 users: action.users,
-                loading: false
+                loading: true
+            }
+        case "ADD_USER":
+            debugger
+            return {
+                ...state,
+                users: [...state.users, action.payload.data.attributes],
+                loading: true
             }
         case "DELETE_USER":
             idx = state.findIndex(user => user.id===action.id);
