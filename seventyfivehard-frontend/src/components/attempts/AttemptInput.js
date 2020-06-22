@@ -6,13 +6,19 @@ class AttemptInput extends Component {
 
     state = {
         completed: false,
-        startdate: Date.today
+        startdate: ""
     }
 
 
     handleOnSubmit(event){
+        console.log(this.props.user.id)
         event.preventDefault()
-        this.props.addAttempt(this.state, this.props.user.id)
+        let attempt = {completed: this.state.completed, startdate: Date.today, user_id: this.props.user.id}
+        this.props.addAttempt(attempt, this.props.user.id)
+        this.setState({
+            completed: false,
+            startdate: ""
+        })
     }
     render() {
         return (
@@ -20,7 +26,9 @@ class AttemptInput extends Component {
                 Start an attempt below:
 
                 <form onSubmit={(event)=> this.handleOnSubmit(event)}>
-                <input type="submit" label="start"/>
+                <input value="Start" type="submit"/>
+
+
 
                 </form>
             </div>

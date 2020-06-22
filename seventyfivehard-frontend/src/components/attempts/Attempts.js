@@ -17,6 +17,9 @@ const Attempts = ({attempts}) => {
     )
 }
 
+//<Attempt/>//
+
+//<//Route path='/users/' render={(routerProps) => <Attempt {...routerProps} attempts={this.props.attempts}/>} />
 
 
 export default Attempts

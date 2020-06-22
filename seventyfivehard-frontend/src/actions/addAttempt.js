@@ -9,8 +9,12 @@ export const addAttempt = (attempt, userId) => {
         body: JSON.stringify(attempt)
     })
         .then(response => {response.json()})
-        .then(responseJSON => {
-            console.log(responseJSON)
+        .then(attempt => {
+            if(attempt.error){
+                alert(attempt.error)
+            } else {
+                dispatch({type: 'ADD_ATTEMPT', payload: attempt})
+            }
             
         })
         

@@ -2,15 +2,20 @@ import React from 'react'
 import DaysContainer from '../../containers/DaysContainer'
 
 const Attempt = (props) => {
-    console.log(props)
-    //let attempt = props.attempts[props.match.params.id - 1]
-    return (
-            <div>
-            
+    if (props.attempts === undefined){
+        return null
+    } else {
+        return (
+        <div>
+        {`Started on: ${props.attempts[props.match.params.id - 1].created_at} Completed?: ${props.attempts[props.match.params.id - 1].completed ? 'Yes' : 'No' }`}
+        <DaysContainer/>
         </div>
- 
-    )
+        )
+    }
 }
+    
+
+
 export default Attempt
 
 

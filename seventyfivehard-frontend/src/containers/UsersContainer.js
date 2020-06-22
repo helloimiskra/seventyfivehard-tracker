@@ -26,6 +26,7 @@ class UsersContainer extends Component {
               <Route exact path ='/users' render={(routerProps) => <Users {...routerProps} users={this.props.users}/>}/>
               </Switch>
             </div>
+            
         )
     }
 }
