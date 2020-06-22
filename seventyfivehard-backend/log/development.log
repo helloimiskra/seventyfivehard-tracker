@@ -4800,3 +4800,1441 @@ Processing by Api::V1::UsersController#index as */*
 Completed 200 OK in 35ms (Views: 32.1ms | ActiveRecord: 2.8ms | Allocations: 17573)
 
 
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mAttempt Load (0.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" LIMIT ?[0m  [["LIMIT", 11]]
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 18:59:13 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (0.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (0.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (0.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (0.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (0.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (0.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (0.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (0.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 55ms (Views: 45.7ms | ActiveRecord: 3.1ms | Allocations: 27916)
+
+
+Started POST "/api/v1/users/1/attempts" for ::1 at 2020-06-22 18:59:23 +0900
+Processing by Api::V1::AttemptsController#create as */*
+  Parameters: {"completed"=>false, "user_id"=>"1", "attempt"=>{"completed"=>false}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/attempts_controller.rb:36:in `set_user'
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 19:25:22 +0900
+Completed 500 Internal Server Error in 1559266ms (ActiveRecord: 0.2ms | Allocations: 270048)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/api/v1/attempts_controller.rb:13:in `create'
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 19:25:24 +0900
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 19:25:24 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (0.8ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.4ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (0.9ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (0.9ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 945ms (Views: 842.3ms | ActiveRecord: 46.4ms | Allocations: 8678300)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 19:25:28 +0900
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Processing by Api::V1::UsersController#index as */*
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (5.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  [1m[35m (3.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  [1m[36mAttempt Load (4.8ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mAttempt Load (1.4ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  [1m[36mAttempt Load (4.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (3.8ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.4ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  [1m[36mAttempt Load (4.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[36mAttempt Load (4.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  [1m[36mAttempt Load (1.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  [1m[36mAttempt Load (1.4ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 2177ms (Views: 2134.7ms | ActiveRecord: 40.2ms | Allocations: 18304354)
+
+
+  [1m[36mAttempt Load (1.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 2388ms (Views: 2282.5ms | ActiveRecord: 46.1ms | Allocations: 19945664)
+
+
+Completed 200 OK in 2314ms (Views: 2272.7ms | ActiveRecord: 31.8ms | Allocations: 19156852)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 19:26:34 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (0.9ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (3.7ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 751ms (Views: 712.6ms | ActiveRecord: 35.7ms | Allocations: 5681238)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 19:27:33 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.5ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.6ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.5ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 721ms (Views: 673.6ms | ActiveRecord: 38.1ms | Allocations: 5678120)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 19:27:44 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (5.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.6ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (2.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (3.9ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (3.9ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (3.8ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 699ms (Views: 646.2ms | ActiveRecord: 44.3ms | Allocations: 5678931)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 19:29:18 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (7.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (5.5ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.4ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.4ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 805ms (Views: 748.2ms | ActiveRecord: 49.4ms | Allocations: 5678945)
+
+
+Started POST "/api/v1/users/undefined/attempts" for ::1 at 2020-06-22 19:29:21 +0900
+Processing by Api::V1::AttemptsController#create as */*
+  Parameters: {"completed"=>false, "user_id"=>"undefined", "attempt"=>{"completed"=>false}}
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/attempts_controller.rb:36:in `set_user'
+Completed 404 Not Found in 29ms (ActiveRecord: 3.5ms | Allocations: 274654)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/api/v1/attempts_controller.rb:36:in `set_user'
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 19:29:43 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (3.8ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 701ms (Views: 662.6ms | ActiveRecord: 35.5ms | Allocations: 5680537)
+
+
+Started POST "/api/v1/users/undefined/attempts" for ::1 at 2020-06-22 19:29:47 +0900
+Processing by Api::V1::AttemptsController#create as */*
+  Parameters: {"completed"=>false, "user_id"=>"undefined", "attempt"=>{"completed"=>false, "user_id"=>"undefined"}}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/attempts_controller.rb:36:in `set_user'
+Completed 404 Not Found in 23ms (ActiveRecord: 1.1ms | Allocations: 188537)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/api/v1/attempts_controller.rb:36:in `set_user'
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 19:30:50 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (3.9ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.4ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (3.9ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.7ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 794ms (Views: 743.4ms | ActiveRecord: 41.1ms | Allocations: 5680536)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 19:31:07 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.9ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (5.4ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.6ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.4ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.8ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 716ms (Views: 660.4ms | ActiveRecord: 46.5ms | Allocations: 5680416)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 19:31:21 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (8.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (8.6ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 835ms (Views: 776.7ms | ActiveRecord: 47.8ms | Allocations: 5680542)
+
+
+Started POST "/api/v1/users/undefined/attempts" for ::1 at 2020-06-22 19:31:40 +0900
+Processing by Api::V1::AttemptsController#create as */*
+  Parameters: {"completed"=>false, "user_id"=>"undefined", "attempt"=>{"completed"=>false, "user_id"=>"undefined"}}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/attempts_controller.rb:36:in `set_user'
+Completed 404 Not Found in 19ms (ActiveRecord: 1.0ms | Allocations: 188537)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=undefined):
+  
+app/controllers/api/v1/attempts_controller.rb:36:in `set_user'
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 19:32:23 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (5.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.7ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 782ms (Views: 739.2ms | ActiveRecord: 34.7ms | Allocations: 5680594)
+
+
+Started POST "/api/v1/users/1/attempts" for ::1 at 2020-06-22 19:32:29 +0900
+Processing by Api::V1::AttemptsController#create as */*
+  Parameters: {"completed"=>false, "user_id"=>"1", "attempt"=>{"completed"=>false, "user_id"=>"1"}}
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/attempts_controller.rb:36:in `set_user'
+Completed 500 Internal Server Error in 14127ms (ActiveRecord: 3.6ms | Allocations: 222545)
+
+
+  
+SystemExit (exit):
+  
+(byebug):1:in `exit'
+(byebug):1:in `create'
+app/controllers/api/v1/attempts_controller.rb:13:in `create'
+Started POST "/api/v1/users/1/attempts" for ::1 at 2020-06-22 19:33:14 +0900
+  [1m[35m (2.9ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::AttemptsController#create as */*
+  Parameters: {"completed"=>false, "user_id"=>"1", "attempt"=>{"completed"=>false, "user_id"=>"1"}}
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/attempts_controller.rb:36:in `set_user'
+  [1m[35m (3.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/attempts_controller.rb:14:in `create'
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/attempts_controller.rb:14:in `create'
+  [1m[36mAttempt Create (5.9ms)[0m  [1m[32mINSERT INTO "attempts" ("completed", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["completed", 0], ["user_id", 1], ["created_at", "2020-06-22 10:33:16.901397"], ["updated_at", "2020-06-22 10:33:16.901397"]]
+  ↳ app/controllers/api/v1/attempts_controller.rb:14:in `create'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/attempts_controller.rb:14:in `create'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "days"."id" FROM "days" WHERE "days"."attempt_id" = ?[0m  [["attempt_id", 2]]
+  ↳ app/controllers/api/v1/attempts_controller.rb:15:in `create'
+Completed 200 OK in 553ms (Views: 105.0ms | ActiveRecord: 50.1ms | Allocations: 4930109)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 19:33:22 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.4ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (3.7ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 767ms (Views: 720.3ms | ActiveRecord: 31.2ms | Allocations: 6431659)
+
+
+Started POST "/api/v1/users/1/attempts" for ::1 at 2020-06-22 19:33:25 +0900
+Processing by Api::V1::AttemptsController#create as */*
+  Parameters: {"completed"=>false, "user_id"=>"1", "attempt"=>{"completed"=>false, "user_id"=>"1"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/attempts_controller.rb:36:in `set_user'
+  [1m[35m (3.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/api/v1/attempts_controller.rb:14:in `create'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/attempts_controller.rb:14:in `create'
+  [1m[36mAttempt Create (1.4ms)[0m  [1m[32mINSERT INTO "attempts" ("completed", "user_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["completed", 0], ["user_id", 1], ["created_at", "2020-06-22 10:33:26.021510"], ["updated_at", "2020-06-22 10:33:26.021510"]]
+  ↳ app/controllers/api/v1/attempts_controller.rb:14:in `create'
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/api/v1/attempts_controller.rb:14:in `create'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "days"."id" FROM "days" WHERE "days"."attempt_id" = ?[0m  [["attempt_id", 3]]
+  ↳ app/controllers/api/v1/attempts_controller.rb:15:in `create'
+Completed 200 OK in 253ms (Views: 49.2ms | ActiveRecord: 9.9ms | Allocations: 1872929)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 19:33:40 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (3.9ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.9ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.5ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 819ms (Views: 774.7ms | ActiveRecord: 34.1ms | Allocations: 6275668)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 19:36:17 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (9.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (5.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.7ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (5.4ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 877ms (Views: 823.7ms | ActiveRecord: 48.2ms | Allocations: 6278527)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 19:45:07 +0900
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (7.4ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (9.4ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (9.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.8ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (5.9ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (3.7ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (2.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 1009ms (Views: 942.8ms | ActiveRecord: 58.4ms | Allocations: 6289558)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 19:45:08 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.5ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.6ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.8ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 824ms (Views: 775.9ms | ActiveRecord: 40.8ms | Allocations: 6275546)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 19:45:54 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (8.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 846ms (Views: 796.7ms | ActiveRecord: 46.2ms | Allocations: 6276206)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 19:46:39 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (5.6ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (5.8ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.4ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.4ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (5.6ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 897ms (Views: 848.2ms | ActiveRecord: 38.9ms | Allocations: 6277767)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 21:54:39 +0900
+  [1m[35m (5.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (5.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.5ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (0.9ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (3.9ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 789ms (Views: 742.2ms | ActiveRecord: 40.7ms | Allocations: 6290428)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 21:56:18 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (5.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.5ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.4ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 772ms (Views: 731.3ms | ActiveRecord: 35.1ms | Allocations: 6275127)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 21:56:48 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (5.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (5.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 893ms (Views: 843.2ms | ActiveRecord: 43.0ms | Allocations: 6277769)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 21:56:55 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.4ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (3.9ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (2.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.4ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.7ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 797ms (Views: 761.2ms | ActiveRecord: 31.8ms | Allocations: 6275871)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 21:57:46 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (6.4ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (6.4ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 873ms (Views: 828.9ms | ActiveRecord: 41.0ms | Allocations: 6279012)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 22:02:20 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (5.4ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.7ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.6ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (5.7ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 856ms (Views: 803.3ms | ActiveRecord: 42.0ms | Allocations: 6278636)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 22:04:12 +0900
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (3.8ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (0.7ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.6ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.5ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 1096ms (Views: 957.9ms | ActiveRecord: 66.4ms | Allocations: 10079814)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 22:15:10 +0900
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (5.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (5.7ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.5ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.4ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.5ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (6.9ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.7ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (2.8ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.4ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 941ms (Views: 876.8ms | ActiveRecord: 55.0ms | Allocations: 6693234)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 22:16:36 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (6.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (5.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (7.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.6ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.8ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (5.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 912ms (Views: 843.1ms | ActiveRecord: 57.0ms | Allocations: 6682044)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 22:16:47 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (6.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.0ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (3.9ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.0ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.4ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.6ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 860ms (Views: 802.9ms | ActiveRecord: 46.4ms | Allocations: 6681445)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 22:17:01 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (6.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.4ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.8ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.3ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (6.4ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 857ms (Views: 802.9ms | ActiveRecord: 51.2ms | Allocations: 6678507)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 22:17:47 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (5.9ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.6ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 823ms (Views: 779.9ms | ActiveRecord: 36.2ms | Allocations: 6680627)
+
+
+Started GET "/api/v1/users/" for ::1 at 2020-06-22 22:18:55 +0900
+Processing by Api::V1::UsersController#index as */*
+  [1m[36mUser Load (6.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (7.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (8.1ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (3.5ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.9ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (5.2ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (4.3ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "attempts"."id" FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 1]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.5ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 2]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 3]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (3.9ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 4]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 5]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (4.7ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 6]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.2ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 7]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+  [1m[36mAttempt Load (1.1ms)[0m  [1m[34mSELECT "attempts".* FROM "attempts" WHERE "attempts"."user_id" = ?[0m  [["user_id", 8]]
+  ↳ app/controllers/api/v1/users_controller.rb:5:in `index'
+Completed 200 OK in 868ms (Views: 802.5ms | ActiveRecord: 59.6ms | Allocations: 6680683)
+
+

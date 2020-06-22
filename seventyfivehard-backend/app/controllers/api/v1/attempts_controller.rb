@@ -9,6 +9,7 @@ class Api::V1::AttemptsController < ApplicationController
 
 
     def create
+
         @attempt = Attempt.new(attempt_params)
         if @attempt.save
             render json: AttemptSerializer.new(@attempt)
