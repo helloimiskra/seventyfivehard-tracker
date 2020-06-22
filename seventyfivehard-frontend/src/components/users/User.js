@@ -4,7 +4,6 @@ import AttemptsContainer from '../../containers/AttemptsContainer'
 
 
 const User = (props) => {
-    console.log()
 
     let user = props.users[props.match.params.id - 1]
 

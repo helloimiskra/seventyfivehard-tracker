@@ -5,10 +5,11 @@ const Attempt = (props) => {
     if (props.attempts === undefined){
         return null
     } else {
+        let attempt = props.attempts[props.match.params.id - 1]
         return (
         <div>
-        {`Started on: ${props.attempts[props.match.params.id - 1].created_at} Completed?: ${props.attempts[props.match.params.id - 1].completed ? 'Yes' : 'No' }`}
-        <DaysContainer/>
+        {`Started on: ${attempt.created_at} Completed?: ${attempt.completed ? 'Yes' : 'No' }`}
+        <DaysContainer attempt={attempt}/>
         </div>
         )
     }
@@ -17,11 +18,3 @@ const Attempt = (props) => {
 
 
 export default Attempt
-
-
-
-//<h1>
-       //      {attempt ? `Started on: ${attempt.startdate} Completed?: ${attempt.completed ? 'Yes' : 'No' }` : null}     
-         
-       //     </h1>
-     //   <DaysContainer/>

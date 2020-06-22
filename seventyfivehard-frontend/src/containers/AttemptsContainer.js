@@ -12,21 +12,23 @@ import { addAttempt } from '../actions/addAttempt';
 
 class AttemptsContainer extends Component {
     render() {
-        console.log(`attempts container ${this.props}`)
         return (
             <div>
 
-            <Switch>
-              <Route path='users/:id/attempts/new' render={()=> <AttemptInput addAttempt={this.props.addAttempt} user ={this.props.user}/>}/>
+                <Switch>
+              <Route exact path='users/:id/attempts/new' render={()=> <AttemptInput addAttempt={this.props.addAttempt} user ={this.props.user}/>}/>
               
-              <Route path='/users/:id/attempts/:id' render={(routerProps) => <Attempt {...routerProps} attempts={this.props.user && this.props.user.attempts}/>} />
+              <Route exact path='/users/:id/attempts/:id' render={(routerProps) => <Attempt {...routerProps} attempts={this.props.user && this.props.user.attempts}/>} />
               
               <Route exact path ='/users/:id/attempts' render={(routerProps) => <Attempts {...routerProps} attempts={this.props.user && this.props.user.attempts}/>}/>
+        
+
+              
+              <AttemptInput user ={this.props.user}addAttempt={this.props.addAttempt} />
+              <Attempts attempts={this.props.user && this.props.user.attempts}/>
+              
+              
               </Switch>
-              
-              
-              
-              
                 
          
 

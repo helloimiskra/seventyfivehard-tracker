@@ -10,18 +10,10 @@ export const addAttempt = (attempt, userId) => {
     })
         .then(response => {response.json()})
         .then(attempt => {
-            if(attempt.error){
-                alert(attempt.error)
-            } else {
                 dispatch({type: 'ADD_ATTEMPT', payload: attempt})
             }
             
-        })
-        
-        
+        )    
     }
   
 }
-
-//let attemptData = responseJSON.data.map(x => x.attributes)
-   //         dispatch({ type: 'ADD_ATTEMPT', payload: attempt})

@@ -11,8 +11,9 @@ class AttemptInput extends Component {
 
 
     handleOnSubmit(event){
-        console.log(this.props.user.id)
+       
         event.preventDefault()
+        console.log(this.props.user.id)
         let attempt = {completed: this.state.completed, startdate: Date.today, user_id: this.props.user.id}
         this.props.addAttempt(attempt, this.props.user.id)
         this.setState({

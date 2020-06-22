@@ -17,13 +17,5 @@ const Attempts = ({attempts}) => {
     )
 }
 
-//<Attempt/>//
-
-//<//Route path='/users/' render={(routerProps) => <Attempt {...routerProps} attempts={this.props.attempts}/>} />
-
 
 export default Attempts
-//{attempts.map(attempt => 
-            
-  //  <li key={attempt.id}>
-   //     <Link to={`/users/${attempt.user_id}/${attempt.id}`}>Attempt #{attempt.id}</Link></li>   )}

@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Days = (props) => {
+const Days = ({days, attempts}) => {
     return (
         <div>
-            Days Component
+            <h2>Days Completed</h2>
+       
             
         </div>
     )

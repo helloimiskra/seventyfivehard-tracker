@@ -2,15 +2,24 @@ import React, { Component } from 'react'
 import Days from '../components/days/Days'
 import Day from '../components/days/Day'
 import DayInput from '../components/days/DayInput'
+
+import {Route, Switch} from 'react-router-dom'
 import {connect} from 'react-redux'
-import { fetchDays } from '../actions/fetchDays';
+import { addDay } from '../actions/addDay';
 
 class DaysContainer extends Component {
     render() {
+        debugger
         return (
+            
             <div>
+                
+
+
+
+
                 Days Container
-                <Days/>
+                <Days days={this.props.days}/>
                 <Day/>
                 <DayInput/>
 
@@ -30,7 +39,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-      fetchDays: () => dispatch(fetchDays())
+      addDay: () => dispatch(addDay())
     }
   }
 
