@@ -18,14 +18,12 @@ function usersReducer(state = { users: [], loading: false } , action){
                 loading: true
             }
         case "ADD_USERS":
-            console.log(action.users)
             return {
                 ...state, 
                 users: action.users,
                 loading: true
             }
         case "ADD_USER":
-            debugger
             return {
                 ...state,
                 users: [...state.users, action.payload.data.attributes],

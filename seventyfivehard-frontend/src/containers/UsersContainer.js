@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import User from '../components/users/User'
 import Users from '../components/users/Users'
 import UserInput from '../components/users/UserInput'
-import {Route} from 'react-router-dom'
+import {Switch, Route} from 'react-router-dom'
 import {connect} from 'react-redux'
 import { fetchUsers } from '../actions/fetchUsers';
 import { addUser } from '../actions/addUser'
@@ -20,10 +20,11 @@ class UsersContainer extends Component {
     render() {
         return (
             <div>
+              <Switch>
               <Route path='/users/new' render={()=> <UserInput addUser={this.props.addUser} />}/>
               <Route path='/users/:id' render={(routerProps) => <User {...routerProps} users={this.props.users}/>} />
               <Route exact path ='/users' render={(routerProps) => <Users {...routerProps} users={this.props.users}/>}/>
-           
+              </Switch>
             </div>
         )
     }

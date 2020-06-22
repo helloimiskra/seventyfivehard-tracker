@@ -3,8 +3,6 @@ import { connect } from 'react-redux'
 import './App.css';
 
 import UsersContainer from './containers/UsersContainer'
-import AttemptsContainer from './containers/AttemptsContainer'
-import DaysContainer from './containers/DaysContainer'
 
 
 class App extends React.Component{
@@ -14,15 +12,11 @@ class App extends React.Component{
       <div className="App">
         
         <UsersContainer/><br></br>
-        <AttemptsContainer/>
-        <br></br>
-        <DaysContainer/>
+  
       </div>
     );
   };
 };
-
-
 
 
 

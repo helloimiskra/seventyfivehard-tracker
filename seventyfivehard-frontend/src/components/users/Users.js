@@ -1,13 +1,13 @@
 import React from 'react'
-import User from './User'
+import {Route, Link } from 'react-router-dom'
 
 const Users= ({users}) => {
-    console.log(users)
-
-
     return (
         <div>
-            {users.map(user => <div key={user.id}><User user={user}/></div>   )}
+            {users.map(user => 
+            
+            <li key={user.id}>
+                <Link to={`/users/${user.id}`}>{user.name}</Link></li>   )}
         </div>
     )
 }

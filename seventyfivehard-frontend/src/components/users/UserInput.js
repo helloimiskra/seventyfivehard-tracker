@@ -29,7 +29,7 @@ class UserInput extends Component {
     render() {
         return (
             <div>
-                User Input
+             
                 <h1>Sign-up or log-in:</h1>
 
                 <form onSubmit={(event)=> this.handleOnSubmit(event)}>
