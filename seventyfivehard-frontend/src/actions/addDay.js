@@ -1,21 +1,19 @@
-export const addDay = (day, userId, attemptId) => {
-
+export const addDay = (day, userId) => {
+   
     return(dispatch) => {
-    fetch(`http://localhost:3000/api/v1/users/${userId}/attempts/${attemptId}/days`, {
+    fetch(`http://localhost:3000/api/v1/users/${userId}/days`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify(day)
     })
-        .then(response => {response.json()})
+        .then(response => {
+            return response.json()})
         .then(day => {
-            if(day.error){
-                alert(day.error)
-            } else {
-                dispatch({type: 'ADD_DAY', payload: day})
-            }
-            
+            debugger
+             
+            dispatch({type: 'ADD_DAY', payload: day})
         })
         
         

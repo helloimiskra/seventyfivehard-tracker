@@ -58,7 +58,10 @@ function attemptsReducer(state = [], action){
 
 function daysReducer(state = [], action){
     let idx;
+    console.log(action)
+ 
     switch(action.type){
+        
         case "ADD_DAY":
             return [...state, action.day];
         case "DELETE_DAY":

@@ -9,19 +9,12 @@ import { addDay } from '../actions/addDay';
 
 class DaysContainer extends Component {
     render() {
-        debugger
         return (
-            
             <div>
-                
-
-
-
-
                 Days Container
-                <Days days={this.props.days}/>
+                <Days days={this.props.days} user={this.props.user}/>
                 <Day/>
-                <DayInput/>
+                <DayInput attempt={this.props.attempt} addDay={this.props.addDay}/>
 
             </div>
         )
@@ -38,8 +31,9 @@ const mapStateToProps = state => {
 }
 
 const mapDispatchToProps = dispatch => {
+    debugger
     return {
-      addDay: () => dispatch(addDay())
+        addDay: day => dispatch(addDay(day))
     }
   }
 

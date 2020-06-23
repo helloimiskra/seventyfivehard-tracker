@@ -25,6 +25,7 @@ class AttemptsContainer extends Component {
 
               
               <AttemptInput user ={this.props.user}addAttempt={this.props.addAttempt} />
+              
               <Attempts attempts={this.props.user && this.props.user.attempts}/>
               
               

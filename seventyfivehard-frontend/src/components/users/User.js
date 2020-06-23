@@ -1,6 +1,6 @@
 import React from 'react'
 import {Redirect} from 'react-router-dom'
-import AttemptsContainer from '../../containers/AttemptsContainer'
+import DaysContainer from '../../containers/DaysContainer'
 
 
 const User = (props) => {
@@ -13,7 +13,7 @@ const User = (props) => {
              {user ? `Your Name: ${user.name} Your Goals: ${user.goals}` : null}     
          
             </h1>
-        <AttemptsContainer user={user}/>
+        <DaysContainer user={user}/>
         </div>
         
     
