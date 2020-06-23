@@ -1,31 +1,29 @@
 import React from 'react'
-import {Route, Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import Day from '../days/Day'
 import DayInput from '../days/DayInput'
 
 const Days = (props) => {
-    debugger
     if (!props.days){
         return null }
         else {
             let days = props.days
             return (
-                <div>
-                <h2>Days:</h2>
+            <div>
+                <h4>Days:</h4>
                 {days.map(day => 
                 <li key={day.id}>
-              <Link to={`/users/${day.user_id}/days/${day.id}`}>Day #{day.id}</Link> <Day/>
-             </li> )}
-
-             
-             <Route exact path='users/:id/days/new' render={()=> <DayInput addDay={this.props.addAttempt} user ={this.props.user.id}/>}/>
-                </div>
+                    <Link to={`/users/${day.user_id}/days/${props.days.indexOf(day)+1}`}>Day #{props.days.indexOf(day)+1}
+                    </Link> 
+                    
+                    </li>
+                    )}
+                    
+            </div>
             )
 
-
-
+        }
     }
-}
    
 
 export default Days

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {withRouter} from 'react-router-dom'
 
 class UserInput extends Component {
 
@@ -17,13 +18,13 @@ class UserInput extends Component {
     handleOnSubmit(event){
         event.preventDefault()
         let user = {name: this.state.name, username: this.state.username, goals: this.state.goals}
-        console.log(this.props)
         this.props.addUser(user)
         this.setState({
             name: '',
             username: '',
             goals: ''
         })
+    
     }
     
     render() {

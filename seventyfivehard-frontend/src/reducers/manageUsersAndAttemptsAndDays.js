@@ -2,13 +2,14 @@ import {combineReducers} from 'redux';
 
 const rootReducer = combineReducers({
     users: usersReducer,
-    attempts: attemptsReducer,
+   // attempts: attemptsReducer,
     days: daysReducer
 });
 
 export default rootReducer;
 
-function usersReducer(state = { users: [], loading: false } , action){
+function usersReducer(state = { users: [], loading: false} , action){
+
     let idx;
     switch(action.type){
         case 'LOADING_USERS':
@@ -18,6 +19,7 @@ function usersReducer(state = { users: [], loading: false } , action){
                 loading: true
             }
         case "ADD_USERS":
+            debugger
             return {
                 ...state, 
                 users: action.users,
@@ -36,34 +38,29 @@ function usersReducer(state = { users: [], loading: false } , action){
                 users: [...state.slice(0, idx), ...state.slice(idx + 1)], 
                 loading: false
             };
+
+        
+        case "DELETE_DAY":
+            idx = state.findIndex(day => day.id===action.id);
+            return {
+                ...state, days: [...state.slice(0, idx), ...state.slice(idx + 1)]
+                };
         default:
             return state; 
     }    
 }
 
-function attemptsReducer(state = [], action){
-    let idx;
-    switch(action.type){
-        case "ADD_ATTEMPT":
-            return [...state, action.attempt];
-        case "DELETE_ATTEMPT":
-            idx = state.findIndex(attempt => attempt.id===action.id);
-            return {
-                ...state, attempts: [...state.slice(0, idx), ...state.slice(idx + 1)]
-            };
-        default:
-            return state; 
-    }    
-}
 
 function daysReducer(state = [], action){
     let idx;
-    console.log(action)
- 
     switch(action.type){
-        
+        case "ADD_DAYS":
+            debugger
+            return [...state, action.days]
+            
         case "ADD_DAY":
-            return [...state, action.day];
+            console.log(action.payload.data.attributes)
+            return [...state, action.payload.data.attributes];
         case "DELETE_DAY":
             idx = state.findIndex(day => day.id===action.id);
             return {
@@ -73,3 +70,19 @@ function daysReducer(state = [], action){
             return state; 
     }    
 }
+
+
+//function attemptsReducer(state = [], action){
+  //  let idx;
+  //  switch(action.type){
+   //     case "ADD_ATTEMPT":
+   //         return [...state, action.attempt];
+   //     case "DELETE_ATTEMPT":
+    //        idx = state.findIndex(attempt => attempt.id===action.id);
+    //        return {
+     //           ...state, attempts: [...state.slice(0, idx), ...state.slice(idx //+ 1)]
+           // };
+     //   default:
+     //       return state; 
+    //}    
+//}

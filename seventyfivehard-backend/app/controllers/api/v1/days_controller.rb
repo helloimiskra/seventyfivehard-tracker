@@ -19,6 +19,7 @@ class Api::V1::DaysController < ApplicationController
 
     def show
         @day = Day.find(params[:id])
+        @day.created_at = @day.created_at.strftime("%Y-%m-%d")
         render json: DaySerializer.new(@day)
     end
 

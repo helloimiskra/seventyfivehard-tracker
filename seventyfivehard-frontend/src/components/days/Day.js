@@ -2,19 +2,18 @@ import React from 'react'
 
 const Day = (props) => {
     
-    if (props.days === undefined){
+    if (props || props.days === undefined){
         return null
     } else {
         
-        let day = props.days[0]
-        console.log(day)
-
-        let date = day.created_at.split('')
-    console.log(date)
-        debugger
+        
+        let day = props[props.match.params.id - 1]
+        console.log(`Day Component: ${day}`)
+        let date = day.created_at.slice(0, 10)   
         return (
         <div>
-        {`Started on: ${day.created_at} Completed?: ${day.completed ? 'Yes' : 'No' }`}
+        Started on: {date} Completed?: {day.completed ? 'Yes' : 'No' }
+    
 
         
         </div>

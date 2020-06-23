@@ -11,8 +11,6 @@ export const addDay = (day, userId) => {
         .then(response => {
             return response.json()})
         .then(day => {
-            debugger
-             
             dispatch({type: 'ADD_DAY', payload: day})
         })
         
@@ -20,6 +18,3 @@ export const addDay = (day, userId) => {
     }
   
 }
-
-//let attemptData = responseJSON.data.map(x => x.attributes)
-   //         dispatch({ type: 'ADD_ATTEMPT', payload: attempt})

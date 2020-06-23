@@ -3,20 +3,37 @@ import Days from '../components/days/Days'
 import Day from '../components/days/Day'
 import DayInput from '../components/days/DayInput'
 
-import {Route, Switch} from 'react-router-dom'
+import {Switch, Route} from 'react-router-dom'
 import {connect} from 'react-redux'
 import { addDay } from '../actions/addDay';
 
 class DaysContainer extends Component {
     
     render() {
-        debugger
+  
         return (
+            
             <div>
-                <Days days={this.props.user && this.props.user.days}/>
+             <DayInput addDay={this.props.addDay} user ={this.props.user.id}/>   
+            <Days days={this.props.user && this.props.days}/>
+            <Day days={this.props.user && this.props.days}/>
+
+             
                 
+
                 <Switch>
-                <Route exact path='/users/:id/days/:id' render={(routerProps) => <Day {...routerProps} days={this.props.user && this.props.user.days}/>} />
+
+                <Route 
+                    path='/users/:id/days/:id' 
+                    render={(routerProps) => <Day days={this.props.user && this.props.days} {...routerProps}/>} />
+
+                <Route 
+                    exact ={true} 
+                    path ='/users/:id/days' 
+                    render={(routerProps) => <Days days={this.props.days}{...routerProps}/>}/>
+
+            
+                <Route path='users/:id/days/new' render={(routerProps)=> <DayInput {...routerProps} addDay={this.props.addDay} user ={this.props.user.id}/>}/>
                 </Switch>
 
             </div>
@@ -25,16 +42,16 @@ class DaysContainer extends Component {
 }
 
 const mapStateToProps = state => {
-    console.log(`current state: ${state.days}`)
+    debugger
    return {
       
-      days: state.days,
+      days: state.days[0],
  
     }
 }
 
 const mapDispatchToProps = dispatch => {
-    debugger
+ 
     return {
         addDay: day => dispatch(addDay(day))
     }

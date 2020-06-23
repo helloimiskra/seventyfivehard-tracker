@@ -10,7 +10,7 @@ export default class NavigationBar extends Component {
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
               <Nav className="mr-auto">
                 <Nav.Link href="http://localhost:3001/users">Home</Nav.Link>
-                <Nav.Link href="#link">Days</Nav.Link>
+                <Nav.Link href="http://localhost:3001/users/new">New User</Nav.Link>
               </Nav>
             </Navbar>
         )

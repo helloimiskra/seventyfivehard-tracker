@@ -5,7 +5,7 @@ const Attempt = (props) => {
     if (props.attempts === undefined){
         return null
     } else {
-        let attempt = props.attempts[0]
+        let attempt = props.attempts[props.match.params.id - 1]
         console.log(attempt)
         debugger
         return (

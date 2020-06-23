@@ -24,7 +24,7 @@ class DayInput extends Component {
 
     handleOnSubmit = (event) => {
         event.preventDefault()
-        this.props.addDay(this.state, this.props.user.id)
+        this.props.addDay(this.state, this.props.user)
         this.setState({
             diet: false,
             workout_one: false,
@@ -40,50 +40,50 @@ class DayInput extends Component {
     render() {
         return (
             <div>
-                Complete the checklist below: <br></br>
+                Add a day by completing the checklist below: <br></br>
                 
                 <form onSubmit={(event)=> this.handleOnSubmit(event)}>
 
-                <li><label>Followed my diet</label> 
+                <li><label>Followed my diet  </label>
                 <input 
                     type="checkbox"
                     name="diet" 
-                    onClick={this.handleOnClick} /></li><br></br>
-                <li><label>Completed Workout #1</label> 
+                    onClick={this.handleOnClick} /></li>
+                <li><label>Completed Workout #1 </label> 
                 <input 
                     type="checkbox" 
                     name="workout_one"
-                    onClick={this.handleOnClick} /></li><br></br>
-                <li><label>Completed Workout #2</label> 
+                    onClick={this.handleOnClick} /></li>
+                <li><label>Completed Workout #2  </label> 
                 <input 
                     type="checkbox"
                     name="workout_two" 
-                    onClick={this.handleOnClick} /></li><br></br>
-                <li><label>No Alcohol Today</label> 
+                    onClick={this.handleOnClick} /></li>
+                <li><label>No Alcohol Today  </label> 
                 <input 
                     type="checkbox"
                     name="no_alcohol" 
-                    onClick={this.handleOnClick} /></li><br></br>
-                <li><label>No Cheatmeal Today</label> 
+                    onClick={this.handleOnClick} /></li>
+                <li><label>No Cheatmeal Today  </label> 
                 <input 
                     type="checkbox"
                     name="no_cheatmeal" 
-                    onClick={this.handleOnClick} /></li><br></br>
-                <li><label>Took a Progress Picture</label> 
+                    onClick={this.handleOnClick} /></li>
+                <li><label>Took a Progress Picture  </label> 
                 <input 
                     type="checkbox"
-                    name="progess_pic" 
-                    onClick={this.handleOnClick} /></li><br></br>
-                <li><label>Drank a gallon of water</label> 
+                    name="progress_pic" 
+                    onClick={this.handleOnClick} /></li>
+                <li><label>Drank a gallon of water  </label> 
                 <input 
                     type="checkbox"
                     name="drank_water" 
-                    onClick={this.handleOnClick} /></li><br></br>
-                <li><label>Read 10 Pages of a Book</label> 
+                    onClick={this.handleOnClick} /></li>
+                <li><label>Read 10 Pages of a Book  </label> 
                 <input 
                     type="checkbox"
                     name="read_book" 
-                    onClick={this.handleOnClick} /></li><br></br>
+                    onClick={this.handleOnClick} /></li>
                 <input value="Complete/Update" type="submit"/>
                 </form>
                

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-
+import NavigationBar from './components/NavigationBar'
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import { Provider } from 'react-redux';
@@ -17,10 +17,11 @@ const store = createStore(rootReducer, composeEnhancer(applyMiddleware(thunk)));
 
 
 ReactDOM.render(
+  
   <Provider store={store}>
     
     <Router>
-   
+    <NavigationBar/>
     <App />
 
     </Router>

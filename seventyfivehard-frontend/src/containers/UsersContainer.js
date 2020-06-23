@@ -6,7 +6,7 @@ import {Switch, Route} from 'react-router-dom'
 import {connect} from 'react-redux'
 import { fetchUsers } from '../actions/fetchUsers';
 import { addUser } from '../actions/addUser'
-import NavigationBar from '../components/NavigationBar'
+import { fetchDays } from '../actions/fetchDays'
 
 
 
@@ -23,6 +23,7 @@ class UsersContainer extends Component {
             <div>
               <Switch>
               <Route path='/users/new' render={()=> <UserInput addUser={this.props.addUser} />}/>
+              
               <Route path='/users/:id' render={(routerProps) => <User {...routerProps} users={this.props.users}/>} />
               <Route exact path ='/users' render={(routerProps) => <Users {...routerProps} users={this.props.users}/>}/>
               </Switch>
@@ -46,6 +47,7 @@ const mapDispatchToProps = dispatch => {
     return {
       fetchUsers: () => dispatch(fetchUsers()),
       addUser: user => dispatch(addUser(user))
+      
     }
   }
 
