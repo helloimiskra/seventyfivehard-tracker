@@ -4,6 +4,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :name
       t.string :username
       t.string :goals
+      t.boolean :challenge_completed
 
       t.timestamps
     end

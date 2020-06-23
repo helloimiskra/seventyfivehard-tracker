@@ -4,7 +4,9 @@ class Api::V1::AttemptsController < ApplicationController
 
     def index
         @attempts = @user.attempts
-        render json: AttemptSerializer.new(@attempts)
+        options = {include: [:days]}
+        hash = AttemptSerializer.new(@attempts, options).serialized_json
+        render json: hash
     end
 
 

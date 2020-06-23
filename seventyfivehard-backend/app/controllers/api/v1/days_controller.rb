@@ -1,14 +1,14 @@
 class Api::V1::DaysController < ApplicationController
 
-     before_action :set_attempt
+     before_action :set_user
 
     def index
-        @days = @attempt.days 
+        @days = @user.days 
         render json: DaySerializer.new(@days)
     end
 
     def create
-        @day = @attempt.days.new(day_params)
+        @day = @user.days.new(day_params)
         if @day.save
             render json: DaySerializer.new(@day)
         else
@@ -39,12 +39,12 @@ class Api::V1::DaysController < ApplicationController
 
     private 
 
-    def set_attempt
-        @attempt = Attempt.find(params[:attempt_id])
+    def set_user
+        @user = User.find(params[:user_id])
     end
 
     def day_params
-        params.require(:day).permit(:diet, :workout_one, :workout_two, :no_alcohol, :no_cheatmeal, :progress_pic, :progress_pic_src, :drank_water, :book_read, :book_info, :day_complete, :attempt_id)
+        params.require(:day).permit(:diet, :workout_one, :workout_two, :no_alcohol, :no_cheatmeal, :progress_pic, :progress_pic_src, :drank_water, :book_read, :book_info, :day_complete, :user_id)
     end
 
 end

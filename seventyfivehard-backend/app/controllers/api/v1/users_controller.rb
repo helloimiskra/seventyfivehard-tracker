@@ -1,8 +1,10 @@
 class Api::V1::UsersController < ApplicationController
 
     def index
-        @users = User.all 
-        render json: UserSerializer.new(@users)
+        @users = User.all
+        options = {include: [:days]}
+        hash = UserSerializer.new(@users, options).serialized_json
+        render json: hash
     end
 
 

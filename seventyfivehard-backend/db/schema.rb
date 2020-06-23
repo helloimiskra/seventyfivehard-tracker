@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2020_06_18_111141) do
     t.boolean "book_read"
     t.string "book_info"
     t.boolean "day_complete"
-    t.integer "attempt_id"
+    t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2020_06_18_111141) do
     t.string "name"
     t.string "username"
     t.string "goals"
+    t.boolean "challenge_completed"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
