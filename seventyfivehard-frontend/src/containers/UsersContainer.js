@@ -6,6 +6,7 @@ import {Switch, Route} from 'react-router-dom'
 import {connect} from 'react-redux'
 import { fetchUsers } from '../actions/fetchUsers';
 import { addUser } from '../actions/addUser'
+import NavigationBar from '../components/NavigationBar'
 
 
 

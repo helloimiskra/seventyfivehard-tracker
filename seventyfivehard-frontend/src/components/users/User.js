@@ -13,7 +13,7 @@ const User = (props) => {
              {user ? `Your Name: ${user.name} Your Goals: ${user.goals}` : null}     
          
             </h1>
-        <DaysContainer user={user}/>
+        <DaysContainer user={user} />
         </div>
         
     

@@ -8,13 +8,16 @@ import {connect} from 'react-redux'
 import { addDay } from '../actions/addDay';
 
 class DaysContainer extends Component {
+    
     render() {
+        debugger
         return (
             <div>
-                Days Container
-                <Days days={this.props.days} user={this.props.user}/>
-                <Day/>
-                <DayInput attempt={this.props.attempt} addDay={this.props.addDay}/>
+                <Days days={this.props.user && this.props.user.days}/>
+                
+                <Switch>
+                <Route exact path='/users/:id/days/:id' render={(routerProps) => <Day {...routerProps} days={this.props.user && this.props.user.days}/>} />
+                </Switch>
 
             </div>
         )
