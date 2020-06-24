@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux'
 import {addDay} from '../../actions/addDay'
+import {withRouter} from 'react-router-dom'
 
 class DayInput extends Component {
 
@@ -35,7 +36,7 @@ class DayInput extends Component {
             drank_water: false,
             book_read: false
         })
-        
+        debugger
     }
 
     render() {
@@ -85,7 +86,7 @@ class DayInput extends Component {
                     type="checkbox"
                     name="read_book" 
                     onClick={this.handleOnClick} /></li>
-                <input value="Complete/Update" type="submit"/>
+                <input value="Add Day" type="submit"/>
                 </form>
                
                 

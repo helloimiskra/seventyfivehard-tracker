@@ -12,13 +12,9 @@ const Days = (props) => {
             
             return (
             <div>
-                <h4>Days:</h4>
                 {days.map(day => 
-                <li key={day.id}>
-                    <Link to={`/users/${day.user_id}/days/${props.days.indexOf(day)+1}`}>Day #{days.indexOf(day)+1}
-                    </Link> 
-                    
-                    </li>
+                <div key={day.id}><h5>Day #{days.indexOf(day)+1}:</h5> <Day day ={day}/>
+                    </div>
                     )}
                     
             </div>

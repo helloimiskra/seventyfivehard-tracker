@@ -6,20 +6,43 @@ import DayInput from '../components/days/DayInput'
 import {Switch, Route} from 'react-router-dom'
 import {connect} from 'react-redux'
 import { addDay } from '../actions/addDay';
+import {Container, Col} from 'react-bootstrap'
+import {Accordion, Card, Button} from 'react-bootstrap'
 
 class DaysContainer extends Component {
+
     
     render() {
   
         return (
-            
-            <div>
-            <DayInput addDay={this.props.addDay} user ={this.props.user.id}/>   
-            <Days days={this.props.days} user = {this.props.user.id}/>
-            <Day days={this.props.user && this.props.days}/>
+    <div>
+            <Accordion defaultActiveKey="0">
+  <Card>
+    <Card.Header>
+      <Accordion.Toggle as={Button} variant="link" eventKey="0">
+        Days
+      </Accordion.Toggle>
+    </Card.Header>
+    <Accordion.Collapse eventKey="0">
+      <Card.Body>
+          <Days days={this.props.days} user = {this.props.user.id}/></Card.Body>
+    </Accordion.Collapse>
+    </Card>
+  <Card>
+    <Card.Header>
+      <Accordion.Toggle as={Button} variant="link" eventKey="1">
+        Add a Day
+      </Accordion.Toggle>
+    </Card.Header>
+    <Accordion.Collapse eventKey="1">
+      <Card.Body><DayInput addDay={this.props.addDay} user ={this.props.user.id}/></Card.Body>
+    </Accordion.Collapse>
+  </Card>
 
-             
-                
+</Accordion>
+
+
+ 
 
                 <Switch>
 
@@ -37,6 +60,7 @@ class DaysContainer extends Component {
                 </Switch>
 
             </div>
+          
         )
     }
 }

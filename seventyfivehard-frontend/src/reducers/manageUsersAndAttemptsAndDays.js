@@ -53,6 +53,7 @@ function daysReducer(state = [], action){
                 )
                 return [...state]         
         case "ADD_DAY":
+            debugger
             return [...state, action.payload.data.attributes];
         case "DELETE_DAY":
             idx = state.findIndex(day => day.id===action.id);

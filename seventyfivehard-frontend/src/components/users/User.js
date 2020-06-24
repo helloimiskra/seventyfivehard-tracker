@@ -2,14 +2,17 @@ import React from 'react'
 import {Redirect} from 'react-router-dom'
 import DaysContainer from '../../containers/DaysContainer'
 import Days from '../days/Days'
-
+import {Container, Col} from 'react-bootstrap'
+import Accordion from 'react-bootstrap/Accordion'
 
 const User = (props) => {
 
     let user = props.users[props.match.params.id - 1]
     if (user){
     return (
+       
         <div>
+            
             <h3>Name:</h3> 
             <h4><li>{user.name}</li></h4> 
             <h3>  Your Goals: </h3>
@@ -20,11 +23,12 @@ const User = (props) => {
         
          
             <br></br>
-        <DaysContainer user={user} />
+        <Col><DaysContainer user={user} /></Col>
         
                 
 
         </div>
+
         
     
     )
