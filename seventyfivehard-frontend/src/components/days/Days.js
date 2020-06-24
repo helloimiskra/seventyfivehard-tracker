@@ -7,7 +7,7 @@ const Days = (props) => {
     if (!props.days){
         return null }
         else {
-            let days = props.days
+            let days = props.days.filter(day => day.user_id === props.user)
             return (
             <div>
                 <h4>Days:</h4>

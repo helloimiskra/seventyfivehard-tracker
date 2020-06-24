@@ -15,7 +15,7 @@ class DaysContainer extends Component {
             
             <div>
              <DayInput addDay={this.props.addDay} user ={this.props.user.id}/>   
-            <Days days={this.props.user && this.props.days}/>
+            <Days days={this.props.days} user = {this.props.user.id}/>
             <Day days={this.props.user && this.props.days}/>
 
              
@@ -42,7 +42,6 @@ class DaysContainer extends Component {
 }
 
 const mapStateToProps = state => {
-    debugger
    return {
       
       days: state.days[0],

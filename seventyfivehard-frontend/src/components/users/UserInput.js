@@ -24,6 +24,8 @@ class UserInput extends Component {
             username: '',
             goals: ''
         })
+        this.props.history.push('/users')
+
     
     }
     
@@ -60,4 +62,4 @@ class UserInput extends Component {
     }
 }
 
-export default UserInput
+export default withRouter(UserInput)

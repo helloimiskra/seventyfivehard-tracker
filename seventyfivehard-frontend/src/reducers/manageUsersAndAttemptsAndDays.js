@@ -19,7 +19,7 @@ function usersReducer(state = { users: [], loading: false} , action){
                 loading: true
             }
         case "ADD_USERS":
-            debugger
+            
             return {
                 ...state, 
                 users: action.users,
@@ -55,12 +55,15 @@ function daysReducer(state = [], action){
     let idx;
     switch(action.type){
         case "ADD_DAYS":
-            debugger
+
             return [...state, action.days]
             
         case "ADD_DAY":
+            debugger
+            
             console.log(action.payload.data.attributes)
-            return [...state, action.payload.data.attributes];
+            return {...state,
+                0: [...state[0], action.payload.data.attributes]};
         case "DELETE_DAY":
             idx = state.findIndex(day => day.id===action.id);
             return {

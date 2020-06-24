@@ -7,6 +7,8 @@ import {connect} from 'react-redux'
 import { fetchUsers } from '../actions/fetchUsers';
 import { addUser } from '../actions/addUser'
 import { fetchDays } from '../actions/fetchDays'
+import {Container} from 'react-bootstrap'
+import ChallengeIntro from '../components/ChallengeIntro'
 
 
 
@@ -21,10 +23,13 @@ class UsersContainer extends Component {
     render() {
         return (
             <div>
+              <ChallengeIntro/>
+            
               <Switch>
               <Route path='/users/new' render={()=> <UserInput addUser={this.props.addUser} />}/>
               
               <Route path='/users/:id' render={(routerProps) => <User {...routerProps} users={this.props.users}/>} />
+            
               <Route exact path ='/users' render={(routerProps) => <Users {...routerProps} users={this.props.users}/>}/>
               </Switch>
             </div>
