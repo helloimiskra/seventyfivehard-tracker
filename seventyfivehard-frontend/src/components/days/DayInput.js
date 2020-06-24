@@ -35,6 +35,7 @@ class DayInput extends Component {
             drank_water: false,
             book_read: false
         })
+        
     }
 
     render() {

@@ -38,13 +38,6 @@ function usersReducer(state = { users: [], loading: false} , action){
                 users: [...state.slice(0, idx), ...state.slice(idx + 1)], 
                 loading: false
             };
-
-        
-        case "DELETE_DAY":
-            idx = state.findIndex(day => day.id===action.id);
-            return {
-                ...state, days: [...state.slice(0, idx), ...state.slice(idx + 1)]
-                };
         default:
             return state; 
     }    
@@ -54,16 +47,13 @@ function usersReducer(state = { users: [], loading: false} , action){
 function daysReducer(state = [], action){
     let idx;
     switch(action.type){
-        case "ADD_DAYS":
-
-            return [...state, action.days]
-            
+        case "ADD_DAYS":  
+            action.days.map(day => 
+                state.push(day)   
+                )
+                return [...state]         
         case "ADD_DAY":
-            debugger
-            
-            console.log(action.payload.data.attributes)
-            return {...state,
-                0: [...state[0], action.payload.data.attributes]};
+            return [...state, action.payload.data.attributes];
         case "DELETE_DAY":
             idx = state.findIndex(day => day.id===action.id);
             return {

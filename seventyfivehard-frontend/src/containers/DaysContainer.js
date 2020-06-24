@@ -14,7 +14,7 @@ class DaysContainer extends Component {
         return (
             
             <div>
-             <DayInput addDay={this.props.addDay} user ={this.props.user.id}/>   
+            <DayInput addDay={this.props.addDay} user ={this.props.user.id}/>   
             <Days days={this.props.days} user = {this.props.user.id}/>
             <Day days={this.props.user && this.props.days}/>
 
@@ -25,7 +25,7 @@ class DaysContainer extends Component {
 
                 <Route 
                     path='/users/:id/days/:id' 
-                    render={(routerProps) => <Day days={this.props.user && this.props.days} {...routerProps}/>} />
+                    render={(routerProps) => <Day user={this.props.user.id} days={this.props.days} {...routerProps}/>} />
 
                 <Route 
                     exact ={true} 
@@ -44,7 +44,7 @@ class DaysContainer extends Component {
 const mapStateToProps = state => {
    return {
       
-      days: state.days[0],
+      days: state.days,
  
     }
 }
