@@ -7,7 +7,7 @@ import {connect} from 'react-redux'
 import { fetchUsers } from '../actions/fetchUsers';
 import { addUser } from '../actions/addUser'
 import { fetchDays } from '../actions/fetchDays'
-import {Container} from 'react-bootstrap'
+import {Accordion, Card, Button } from 'react-bootstrap'
 import ChallengeIntro from '../components/ChallengeIntro'
 
 
@@ -23,8 +23,9 @@ class UsersContainer extends Component {
     render() {
         return (
             <div>
-              <ChallengeIntro/>
               
+              
+
               <Switch>
               <Route path='/users/new' render={()=> <UserInput addUser={this.props.addUser} />}/>
               

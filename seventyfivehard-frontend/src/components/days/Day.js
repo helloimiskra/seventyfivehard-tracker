@@ -7,16 +7,13 @@ const Day = ({day}) => {
 
         </div>
     }
-    
-    
     else {
-        debugger
-
+        
         let date = day.created_at.slice(0, 10)   
         return (
             
         <div>
-        Date: {date} Completed?: {day.day_complete ? 'Yes' : 'No' }<br></br>
+        Date: {date} <br></br>
         <li>Diet followed?: {day.diet ? 'Yes' : 'No' }</li>
 
         <li>Workout #1 Completed?: {day.workout_one ? 'Yes' : 'No' }</li>
