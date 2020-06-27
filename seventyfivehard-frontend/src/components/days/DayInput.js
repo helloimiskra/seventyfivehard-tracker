@@ -84,7 +84,7 @@ class DayInput extends Component {
                 <li><label>Read 10 Pages of a Book  </label> 
                 <input 
                     type="checkbox"
-                    name="read_book" 
+                    name="book_read" 
                     onClick={this.handleOnClick} /></li>
                 <input value="Add Day" type="submit"/>
                 </form>

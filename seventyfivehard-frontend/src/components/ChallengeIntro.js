@@ -6,7 +6,7 @@ const ChallengeIntro = () => {
         <div>
             <Container>
                
-              <h3>Interested in the #75HARD challenge? <br></br> Are you ready to start a mental challenge and "take complete control of your life"? <br></br> 75 Hard Tracker is a way to track your progress. Sign up or log-in to continue.</h3><br></br>
+              <h3><center>Interested in the #75HARD challenge? <br></br> Are you ready to start a mental challenge and "take complete control of your life"? <br></br> 75 Hard Tracker is a way to track your progress. <br></br>Select your name from the Current Challengers list or click New User to begin.</center></h3><br></br>
 
 <h4>What is the #75HARD challenge? </h4><br></br>
 
