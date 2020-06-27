@@ -7,7 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 
-user = User.create(name: 'Iskra', username: 'mishka_umma', goals: "to get stronger and challenge myself", challenge_completed: false)
+user = User.create(name: 'John Doe', username: 'johndoe', goals: "to get stronger and challenge myself", challenge_completed: false)
+
+user_two = User.create(name: 'Jane Doe', username: 'janedoe', goals: "to get out of a rut", challenge_completed: false)
 
 #attempt = Attempt.create(completed: false, user_id: 1, startdate: Date.today)
 
