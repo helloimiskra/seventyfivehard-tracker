@@ -11,7 +11,7 @@ Made with
 - react-router-dom 5.2.0
 - redux 4.0.5
 - redux-thunk 2.3.0
-- react-boostrap 1.0.1
+- react-bootstrap 1.0.1
 
 ## Installation
 
